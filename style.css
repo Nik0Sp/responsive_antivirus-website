@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-bg-primary: #f5f5f5;
+  --color-bg-seconder: #eaeaea;
+  --color-bg-light-seconder: #ffffff;
+
+  --color-accent: #036ce5;
+  --color-success: #77dd77;
+  --color-warning: #ffd700;
+  --color-danger: #ffa07a;
+  --color-black: #333;
+  --container-width-lg: 84%;
+  --container-width-md: 90%;
+  --container-width-sm: 96%;
+
+  --font-size-lg: 1.2rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.9rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: var(--color-bg-primary);
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+a {
+  color: var(--color-black);
+}
+p {
+  font-size: var(--font-size-lg);
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-bg-light-seconder);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  border-color: var(--color-black);
+  background: var(--color-bg-primary);
+  opacity: 0.9;
+  color: var(--color-black);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg-light-seconder);
+}
+
+/* ============================== NAVBAR SECTION START ===============================*/
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.6rem;
+  background: var(--color-bg-primary);
+}
+nav button {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background: var(--color-bg-seconder);
+  border-radius: 1.9rem;
+  padding: 0.9rem 2rem;
+}
+
+.nav-container .logo a {
+  display: flex;
+  color: #77dd77;
+  align-items: center;
+}
+
+.nav-container .logo a i {
+  font-size: 2.1rem;
+}
+
+.nav-container .logo a h3 {
+  color: var(--color-black);
+  margin-left: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+}
+
+/* ============================== HEADER SECTION START ===============================*/
+
+#home {
+  position: relative;
+  top: 6rem;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9%;
+  padding: 3rem;
+}
+
+/* ============================== ABOUT SECTION START ===============================*/
+#about h2 b {
+  color: var(--color-accent);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 6%;
+}
+
+.about-container article i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================== SERVICE SECTION START ===============================*/
+#services {
+  margin-top: 9rem;
+}
+.service-slider {
+  padding: 0 6rem;
+}
+.service-slider .service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
+  gap: 5%;
+}
+
+.service-card .container-left {
+  background: var(--color-bg-seconder);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  grid-area: item1;
+}
+.service-card .container-left h3 {
+  margin-bottom: 0.6rem;
+}
+
+.service-card .container-left .products-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-card .container-left .products-content article {
+  margin-bottom: 0.9rem;
+  transition: all 0.5s ease;
+}
+
+.service-card .container-left .products-content article h3 {
+  margin-bottom: 0;
+}
+
+.service-card .container-left .products-content article h3 i {
+  margin-right: 0.6rem;
+  color: var(--color-accent);
+}
+
+.service-card .container-left .products-content article small {
+  display: none;
+}
+
+.service-card .container-left .products-content article.open small {
+  display: block;
+}
+
+.service-card .container-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+}
+
+.service-card .container-right article {
+  border: 1px solid var(--color-bg-seconder);
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card .container-right article:last-child {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.service-card .container-right article h3 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+.service-card .container-right article p {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+.service-card .container-right article .price {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.service-card .container-right article .price span {
+  font-size: 1rem;
+}
+.service-card .container-right article small:first-child {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+.service-card .container-right article small:first-child i {
+  margin-right: 0.3rem;
+}
+
+.service-card .container-right article small {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.service-card .container-right article small:last-child {
+  margin-top: 1rem;
+  font-size: 0.6rem;
+}
+
+.service-card .container-bottom {
+  grid-area: item3;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .container-bottom table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+.service-card .container-bottom table tr {
+  background: var(--color-bg-seconder);
+}
+.service-card .container-bottom table tr:nth-child(2) {
+  background: var(--color-bg-primary);
+}
+
+.service-card .container-bottom table tr i {
+  margin-right: 0.3rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.service-card .container-bottom table tr td {
+  padding: 1rem;
+}
+
+.service-card .container-bottom table tr td p {
+  max-width: 76%;
+  display: none;
+}
+
+.service-card .container-bottom table tr.open p {
+  display: flex;
+}
+
+.service-card .container-bottom small {
+  width: 100%;
+  text-align: right;
+  margin-top: 1.8rem;
+  opacity: 0.8;
+}
+
+.service-card .container-bottom small b {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
