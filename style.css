@@ -878,13 +878,19 @@ footer h4 {
     margin-top: 5rem;
   }
 
+ 
+
   #attribute .attribute-slider {
     display: none;
   }
+  #attribute h2{
+    margin-top: 1rem;
+  }
 
   .attribute-container {
-    padding: 6rem 0;
+    padding: .3rem .3rem 3rem .3rem;
   }
+
 
   .attribute-icons {
     grid-template-columns: 1fr;
